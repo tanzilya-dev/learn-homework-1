@@ -1,3 +1,6 @@
+# my settings
+settings.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -96,6 +99,8 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
+.vscode/
+.idea/
 .env
 .venv
 env/
@@ -121,3 +126,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Mac OS files
+.DS_Store
