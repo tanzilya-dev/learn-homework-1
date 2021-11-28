@@ -15,12 +15,26 @@
 
 """
 
+def strings_check(str1, str2):
+    if not(type(str1) is str and type(str2) is str):
+        return 0
+    if str1 == str2:
+        return 1
+    elif len(str1) > len(str2):
+        return 2
+    elif str2 == 'learn':
+        return 3 
+
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    print(strings_check('Hi', 55))
+    print(strings_check('Hi', 'Hi'))
+    print(strings_check('Hello', 'Hi'))
+    print(strings_check('Hi', 'learn'))
     
 if __name__ == "__main__":
     main()
