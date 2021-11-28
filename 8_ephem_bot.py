@@ -12,6 +12,7 @@
   бота отвечать, в каком созвездии сегодня находится планета.
 
 """
+
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import settings
@@ -33,8 +34,11 @@ PROXY = {
 
 def greet_user(update, context):
     print('Call /start')
-    # print(str(update['message']['from']['first_name']))
-    update.message.reply_text('Hi, user! You called command /start')
+    # print(update.message)
+    # print(dir(update.message))
+    user_name = update.message.from_user.first_name
+    # print(user_name)
+    update.message.reply_text(f'Hi, {user_name}! You called command /start')
 
 
 def talk_to_me(update, context):
