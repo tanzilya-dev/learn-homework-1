@@ -19,7 +19,7 @@ import settings
 import ephem
 import datetime
 
-logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
                     filename='bot.log')
 
