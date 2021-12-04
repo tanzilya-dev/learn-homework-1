@@ -19,11 +19,11 @@ def get_occupation_by_age(age):
         return 'Возраст не может быть отрицательным!'
     elif age < 7:
         return 'Ходи пока в детский сад'
-    elif 7 <= age < 18:
+    elif age < 18:
         return 'Тебе следует ходить в школу'
-    elif 18 <= age < 22:
+    elif age < 22:
         return 'Тебе бы пойти в ВУЗ учиться'
-    elif 22 <= age < 65:
+    elif age < 65:
         return 'Иди работать'
     else:
         return 'Пора на пенсию'

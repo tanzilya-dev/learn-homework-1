@@ -16,7 +16,7 @@
 """
 
 def strings_check(str1, str2):
-    if not(type(str1) is str and type(str2) is str):
+    if not(isinstance(str1, str) and isinstance(str2, str)):
         return 0
     if str1 == str2:
         return 1

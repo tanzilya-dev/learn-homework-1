@@ -37,7 +37,6 @@ def greet_user(update, context):
     # print(update.message)
     # print(dir(update.message))
     user_name = update.message.from_user.first_name
-    # print(user_name)
     update.message.reply_text(f'Hi, {user_name}! You called command /start')
 
 
@@ -49,11 +48,9 @@ def talk_to_me(update, context):
 
 def get_planet_constellation(update, context):
     planet_name = update.message.text.split()[1].capitalize()
-    # print(planet_name)
     now = datetime.datetime.now()
     planet = getattr(ephem, planet_name)(now.strftime("%Y/%m/%d"))
     constell = ephem.constellation(planet)
-    # print(constellation)
     update.message.reply_text(f'Today planet {planet_name} is in constellation {constell[1]}')
 
 
