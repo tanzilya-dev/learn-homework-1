@@ -16,7 +16,8 @@
 """
 
 questions_and_answers = {"Как дела?": "Хорошо!", 
-                         "Что делаешь?": "Программирую"}
+                         "Что делаешь?": "Программирую",
+                         "Сколько раз ты сегодня чихнул?": 0}
 
 def ask_user(answers_dict):
     """
@@ -25,7 +26,7 @@ def ask_user(answers_dict):
     while True:
         question = input('Введите вопрос: ')
         answer = questions_and_answers.get(question)
-        if answer:
+        if answer is not None:
             print(answer)
         else:
             break        
